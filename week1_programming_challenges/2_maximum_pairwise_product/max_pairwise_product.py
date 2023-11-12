@@ -8,8 +8,19 @@ def max_pairwise_product(numbers):
 
     return max_product
 
+def my_max_pairwise_product(numbers):
+    # find the largest number in numbers
+    max1 = max(numbers)
+    # find the next largest number in numbers 
+    # by removing the largest number from numbers
+    numbers.remove(max1)
+    max2 = max(numbers)
+    return max1 * max2 
+
+
 
 if __name__ == '__main__':
     input_n = int(input())
     input_numbers = [int(x) for x in input().split()]
-    print(max_pairwise_product(input_numbers))
+    print(my_max_pairwise_product(input_numbers))
+
