@@ -1,3 +1,5 @@
+#Order of growth: O(n^2)
+#Why? Because there are two nested loops, each of which is O(n)
 def max_pairwise_product(numbers):
     n = len(numbers)
     max_product = 0
@@ -8,6 +10,8 @@ def max_pairwise_product(numbers):
 
     return max_product
 
+#Order of growth: O(n)
+#Why? Because the max function is O(n) and the remove function is O(n)
 def my_max_pairwise_product(numbers):
     # find the largest number in numbers
     max1 = max(numbers)
